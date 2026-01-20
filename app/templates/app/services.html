@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services | Metro PD Database</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<nav>
+    <div class="badge-logo">METRO POLICE DEPT</div>
+    <div class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">Precinct Info</a>
+        <a href="{% url 'services' %}" style="border-bottom: 2px solid var(--gold);">Public Services</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+
+<div class="main-dashboard" style="grid-template-columns: 1fr;"> <div class="panel">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="color: var(--gold);">CENTRAL SERVICE DIRECTORY</h2>
+            <span class="status-tag">[ ENCRYPTED ACCESS GRANTED ]</span>
+        </div>
+        <p style="margin-bottom: 30px; opacity: 0.7;">Select a module below to begin a request or view public records.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div>
+                    <h3>Records Request</h3>
+                    <p>Obtain official police reports, incident summaries, and background verification documents.</p>
+                </div>
+                <a href="#" class="btn-outline">ACCESS RECORDS</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <h3>Permit Portal</h3>
+                    <p>Apply for residential parking, noise variances, or public event security permits.</p>
+                </div>
+                <a href="#" class="btn-outline">APPLY NOW</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <h3>Fine Payment</h3>
+                    <p>Securely pay traffic citations and administrative fines via the online treasury link.</p>
+                </div>
+                <a href="#" class="btn-outline">PAY CITATION</a>
+            </div>
+
+            <div class="service-card">
+                <div>
+                    <h3>Property Return</h3>
+                    <p>Schedule a time to recover lost or seized property currently held in the evidence locker.</p>
+                </div>
+                <a href="#" class="btn-outline">BOOK APPOINTMENT</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

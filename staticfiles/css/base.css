@@ -1,0 +1,122 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #556B2F 25%, #8B4513 25%, #8B4513 50%, #F0E68C 50%, #F0E68C 75%, #556B2F 75%); /* Camo pattern gradient */
+    background-size: 20px 20px; 
+    color: #000; 
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #556B2F 0%, #8B4513 50%, #000 100%); 
+    color: #F0E68C;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+header img {
+    height: 60px;
+    margin-bottom: 10px;
+    border: 2px solid #F0E68C; 
+}
+
+nav {
+    background: #8B4513; 
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #000; 
+}
+
+nav a {
+    color: #F0E68C; 
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; 
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFF; 
+    text-shadow: 1px 1px 2px #000; 
+}
+
+main {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(240, 230, 140, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #556B2F; 
+}
+
+footer {
+    background: linear-gradient(90deg, #556B2F 0%, #8B4513 50%, #000 100%); 
+    color: #F0E68C; 
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #8B4513; 
+    border-radius: 5px;
+    font-size: 16px;
+    background: #F0E68C; 
+    color: #000;
+}
+
+form button {
+    background: #556B2F; 
+    color: #F0E68C; 
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #000; 
+    color: #F0E68C;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #F0E68C; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #8B4513; 
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 {
+    color: #000; 
+    text-shadow: 1px 1px 2px #556B2F; 
+}
+
+p {
+    color: #333; 
+}

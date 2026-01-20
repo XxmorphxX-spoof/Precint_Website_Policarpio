@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{% block title %}City Police Station{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'app/images/logo.png' %}" alt="Logo" style="height: 50px;">
+        <h1>{% block header %}City Police Station{% endblock %}</h1>
+    </header>
+    <nav>
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'services' %}">Services</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'contactsubmission' %}">Submit Contact</a>
+
+    </nav>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>&copy; 2023 City Police Station. All rights reserved.</footer>
+</body>
+</html>

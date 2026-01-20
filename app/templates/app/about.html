@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Precinct Dossier</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<nav>
+    <div class="badge-logo">METRO POLICE DEPT</div>
+    <div class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}" style="border-bottom: 2px solid var(--gold);">Precinct Info</a>
+        <a href="{% url 'services' %}">Public Services</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+
+<div class="main-dashboard">
+    <div class="panel">
+        <h2 style="color: var(--gold); margin-bottom: 20px;">DEPARTMENTAL OVERVIEW</h2>
+        
+        <div class="dossier-layout">
+            <div class="chief-profile">
+                <div class="chief-photo">
+                    [ PORTRAIT<br>DATA_UNAVAILABLE ]
+                </div>
+                <h4 style="color: var(--gold);">Chief Marcus Sterling</h4>
+                <p style="font-size: 0.75rem; opacity: 0.8;">Commanding Officer</p>
+                <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 15px 0;">
+                <p style="font-size: 0.8rem; text-align: left;">Serving since 2008. Dedicated to community-led policing and technological transparency.</p>
+            </div>
+
+            <div class="mission-box">
+                <h3 style="margin-bottom: 10px;">Our Mission</h3>
+                <p>The Metropolitan Police Department is committed to protecting the life, property, and rights of all citizens. We operate under the philosophy of <strong>Integrity, Valor, and Community Service</strong>.</p>
+                
+                <h3 style="margin-top: 30px;">Operational Protocols</h3>
+                <ul class="protocol-list">
+                    <li>24/7 Rapid Response Coordination</li>
+                    <li>Advanced Cyber-Crime Prevention</li>
+                    <li>Community Outreach & Safety Programs</li>
+                    <li>Transparent Public Record Access</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h3 style="color: var(--gold);">Precinct Data</h3>
+        <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 15px 0;">
+        <p style="font-size: 0.85rem; margin-bottom: 10px;"><strong>Officers:</strong> 154 Active</p>
+        <p style="font-size: 0.85rem; margin-bottom: 10px;"><strong>Jurisdiction:</strong> District 4 & 7</p>
+        <p style="font-size: 0.85rem; margin-bottom: 10px;"><strong>Established:</strong> 1924</p>
+        
+        <div style="margin-top: 30px; padding: 10px; border: 1px solid var(--emergency-red); background: rgba(211, 47, 47, 0.1); font-size: 0.75rem; text-align: center;">
+            <span style="color: var(--emergency-red); font-weight: bold;">SECURITY NOTICE</span><br>
+            All personnel data is verified.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

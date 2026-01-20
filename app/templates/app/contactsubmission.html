@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<nav>
+    <div class="badge-logo">METRO POLICE DEPT</div>
+</nav>
+
+<div class="main-dashboard" style="grid-template-columns: 1fr; justify-items: center;">
+    <div class="panel" style="text-align: center; max-width: 600px;">
+        <h1 style="color: #00ff00;">✔ TRANSMISSION SUCCESSFUL</h1>
+        <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 20px 0;">
+        
+        <p>Thank you, <strong>{{ name }}</strong>.</p>
+        <p>Your inquiry has been encrypted and routed to the Metropolitan Dispatch Center. A records officer will review your transmission shortly.</p>
+        
+        <div style="background: rgba(0,0,0,0.4); padding: 15px; margin: 20px 0; font-family: monospace; font-size: 0.8rem; border-left: 3px solid #00ff00;">
+            REFERENCE_ID: #MPD-{{ 12345|add:54321 }}<br>
+            TIMESTAMP: {% now "Y-m-d H:i:s" %}
+        </div>
+
+        <a href="{% url 'homepage' %}" class="btn-emergency" style="display: inline-block; text-decoration: none;">RETURN TO DASHBOARD</a>
+    </div>
+</div>
+
+</body>
+</html>

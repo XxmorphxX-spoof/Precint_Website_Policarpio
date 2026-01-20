@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metropolitan PD | Command Center</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<nav>
+    <div class="badge-logo">METRO POLICE DEPT</div>
+    <div class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">Precinct Info</a>
+        <a href="{% url 'services' %}">Public Records</a>
+        <a href="{% url 'contact' %}">Contact Dispatch</a>
+    </div>
+</nav>
+
+<div class="main-dashboard">
+    <div class="panel">
+        <div class="status-indicator">
+            <div class="blinker"></div> SYSTEM SECURE // LIVE PATROL FEED
+        </div>
+        <h1 style="margin: 20px 0;">Welcome to the Digital Precint</h1>
+        <p>This is the official online portal for the Metropolitan Police Department. Residents can file reports, request records, and access community safety resources via this encrypted terminal.</p>
+        
+        <div style="margin-top: 40px;">
+            <a href="{% url 'contact' %}" class="btn-emergency" style="display: inline-block; text-decoration: none;">REPORT AN INCIDENT</a>
+            <!-- Changed to a link that looks like a button -->
+            <a href="{% url 'contact' %}" style="background: transparent; border: 1px solid white; color: white; padding: 15px 30px; margin-left: 10px; border-radius: 5px; display: inline-block; text-decoration: none;">VIEW CRIME MAP</a>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h3 style="color: #ffd700;">Community Alerts</h3>
+        <hr style="border: 0.5px solid rgba(255,255,255,0.1); margin: 15px 0;">
+        <ul style="list-style: none; font-size: 0.9rem;">
+            <li style="margin-bottom: 15px;">⚠️ <strong>Weather:</strong> Heavy rain expected. Drive safely.</li>
+            <li style="margin-bottom: 15px;">📢 <strong>Traffic:</strong> Main St. closed for maintenance.</li>
+            <li>👮 <strong>Event:</strong> Neighborhood Watch meeting tonight at 6 PM.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

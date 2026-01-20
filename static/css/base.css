@@ -1,0 +1,122 @@
+:root {
+    --police-blue: #002366;
+    --emergency-red: #d32f2f;
+    --interface-glass: rgba(255, 255, 255, 0.1);
+    --text-light: #f8f9fa;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #001a3d 0%, #000814 100%);
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+/* Background Animation: Pulsing Emergency Light */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(211, 47, 47, 0.05) 0%, transparent 50%);
+    animation: blueRedPulse 4s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes blueRedPulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
+}
+
+/* Glass-morphism Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-logo {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffd700; /* Gold Badge Color */
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--emergency-red);
+}
+
+/* The "Command Center" Container */
+.main-dashboard {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.panel {
+    background: var(--interface-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    backdrop-filter: blur(5px);
+}
+
+/* Unique Feature: Live Status Blinker */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #00ff00;
+}
+
+.blinker {
+    width: 10px;
+    height: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Emergency Button */
+.btn-emergency {
+    background: var(--emergency-red);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(211, 47, 47, 0.4);
+    transition: 0.3s;
+}
+
+.btn-emergency:hover {
+    transform: scale(1.05);
+    background: #ff0000;
+}

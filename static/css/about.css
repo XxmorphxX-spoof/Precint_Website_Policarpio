@@ -1,0 +1,51 @@
+/* About Page Specifics */
+.dossier-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.chief-profile {
+    flex: 1;
+    text-align: center;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.chief-photo {
+    width: 150px;
+    height: 150px;
+    background: #1a1a1a;
+    border: 2px solid var(--gold);
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.mission-box {
+    flex: 2;
+}
+
+.protocol-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.protocol-list li {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.protocol-list li::before {
+    content: "◈";
+    color: var(--gold);
+    margin-right: 15px;
+}

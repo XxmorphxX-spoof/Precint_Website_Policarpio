@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uplink | Contact Metro PD</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+
+<nav>
+    <div class="badge-logo">METRO POLICE DEPT</div>
+    <div class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">Precinct Info</a>
+        <a href="{% url 'services' %}">Public Records</a>
+        <a href="{% url 'contact' %}">Contact Dispatch</a>
+    </div>
+</nav>
+
+<div class="main-dashboard">
+    <div class="panel">
+        <h2 style="color: #ffd700; margin-bottom: 10px;">SECURE COMMUNICATION UPLINK</h2>
+        <p style="font-size: 0.9rem; margin-bottom: 30px;">Use this form for non-emergency inquiries only. In case of a life-threatening emergency, dial <strong>911</strong> immediately.</p>
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="contact-grid">
+                <div class="input-group">
+                    <label>{{ form.name.label }}</label>
+                    {{ form.name }}
+                    {% if form.name.errors %}<div class="error">{{ form.name.errors }}</div>{% endif %}
+                </div>
+                <div class="input-group">
+                    <label>{{ form.email.label }}</label>
+                    {{ form.email }}
+                    {% if form.email.errors %}<div class="error">{{ form.email.errors }}</div>{% endif %}
+                </div>
+            </div>
+            <div class="input-group">
+                <label>{{ form.subject.label }}</label>
+                {{ form.subject }}
+                {% if form.subject.errors %}<div class="error">{{ form.subject.errors }}</div>{% endif %}
+            </div>
+            <div class="input-group">
+                <label>{{ form.message.label }}</label>
+                {{ form.message }}
+                {% if form.message.errors %}<div class="error">{{ form.message.errors }}</div>{% endif %}
+            </div>
+            <button type="submit" class="btn-emergency" style="width: 100%;">SEND SECURE TRANSMISSION</button>
+        </form>
+    </div>
+
+    <div class="panel">
+        <h3 style="margin-bottom: 20px;">PRECINCT LOCATION</h3>
+        
+        <div class="info-card">
+            <h4>Address</h4>
+            <p>123 Justice Way<br>Metro City, MC 54321</p>
+        </div>
+
+        <div class="info-card">
+            <h4>Direct Lines</h4>
+            <p>Non-Emergency: (555) 123-4567<br>Records Dept: (555) 123-8899</p>
+        </div>
+
+        <div class="map-placeholder">
+            <!-- Placeholder for map; replace with real embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-74.0!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDAuNzAwMDAw!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
